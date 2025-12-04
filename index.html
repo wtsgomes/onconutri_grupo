@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onconutri - Grupo de Apoio e Nutrição</title>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4180183745554136'); // Seu Pixel ID
+        fbq('track', 'PageView');
+        
+        // Rastrear clique no botão
+        function rastrearClique() {
+            fbq('track', 'Lead', {content_name: 'Entrar no Grupo Onconutri'});
+            // Mensagem de boas-vindas ao WhatsApp
+            setTimeout(function() {
+                alert('🎉 Bem-vindo ao Grupo de Apoio Onconutri!\n\nVocê será redirecionado para o WhatsApp agora.');
+            }, 100);
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=4180183745554136&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a472a 0%, #2d6a4f 50%, #40916c 100%);
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            padding: 40px 30px;
+            margin: 20px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Logo */
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Cabeçalho */
+        header h1 {
+            font-size: 2.8em;
+            color: #2d6a4f;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        header .tagline {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* Seção Hero */
+        .hero h2 {
+            font-size: 2em;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366 0%, #1da75d 100%);
+            color: #ffffff;
+            padding: 18px 50px;
+            font-size: 1.4em;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            margin-bottom: 25px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #1da75d 0%, #0f7c47 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .proof-social {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .proof-social .member-count {
+            font-weight: bold;
+            color: #2d6a4f;
+        }
+
+        /* Seção Benefícios */
+        .benefits {
+            background: #f0f8f0;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: left;
+            box-shadow: inset 0 0 10px rgba(45, 106, 79, 0.1);
+            border-left: 5px solid #40916c;
+        }
+
+        .benefits h3 {
+            font-size: 1.6em;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits ul li {
+            background: #ffffff;
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.05em;
+            color: #444;
+            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.1);
+            border-left: 4px solid #40916c;
+        }
+
+        .benefits ul li::before {
+            content: '✓';
+            color: #40916c;
+            margin-right: 12px;
+            font-size: 1.3em;
+            font-weight: bold;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        /* Seção Por que entrar */
+        .why-join {
+            margin-bottom: 40px;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #40916c;
+        }
+
+        .why-join h3 {
+            font-size: 1.6em;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+
+        .why-join p {
+            font-size: 1.05em;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+                margin: 10px;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            header h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero h2 {
+                font-size: 1.6em;
+            }
+            
+            .cta-button {
+                font-size: 1.2em;
+                padding: 15px 35px;
+            }
+            
+            .benefits h3, .why-join h3 {
+                font-size: 1.4em;
+            }
+            
+            .benefits ul li {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Onconutri03.png" alt="Logo Onconutri" class="logo">
+            <h1>Onconutri</h1>
+            <p class="tagline">Seu apoio em nutrição e bem-estar durante o tratamento oncológico.</p>
+        </header>
+
+        <section class="hero">
+            <h2>Comunidade de Apoio Exclusiva para Pacientes com Câncer</h2>
+            <p>Encontre suporte, informação e orientação especializada para uma jornada mais leve e nutritiva. Um espaço seguro para você e sua família.</p>
+            
+            <a href="https://chat.whatsapp.com/HbGch6Nj0D72xLrAJaPhYE" class="cta-button" onclick="rastrearClique(); return true;">
+                ✓ ENTRAR NO GRUPO AGORA
+            </a>
+            
+            <p class="proof-social">Junte-se a mais de <span class="member-count">1.200</span> membros que já estão se beneficiando!</p>
+        </section>
+
+        <section class="benefits">
+            <h3>O que você vai encontrar no grupo Onconutri:</h3>
+            <ul>
+                <li>Orientações de alimentação nutritiva e específica para cada fase do tratamento.</li>
+                <li>Ajuda para entender seus exames de hemograma e outros resultados importantes.</li>
+                <li>Suporte emocional e troca de experiências com quem entende seus desafios.</li>
+                <li>Dicas práticas para melhorar sua qualidade de vida e bem-estar diário.</li>
+                <li>Acesso a materiais exclusivos e lives com especialistas.</li>
+            </ul>
+        </section>
+
+        <section class="why-join">
+            <h3>Por que o Onconutri é para você?</h3>
+            <p>Sabemos que a jornada contra o câncer é desafiadora e cheia de dúvidas. Nosso grupo oferece um ambiente seguro e acolhedor, onde você terá acesso a informações valiosas, apoio mútuo e a força de uma comunidade que compartilha dos mesmos desafios e vitórias. Não enfrente isso sozinho(a), venha fazer parte da nossa rede de apoio.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Onconutri. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
